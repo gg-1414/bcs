@@ -4,10 +4,11 @@ import { Input } from './input';
 export const Signup = () => {
     const [email, setEmail] = useState('');
     return (
-        <form>
+        <form name="newsletter" method="POST">
+            <input type="hidden" name="form-name" value="newsletter" />
             <div className="d-flex flex-row">
                 <Input
-                    type="text"
+                    type="email"
                     name="email"
                     placeholder="Enter your email"
                     onChange={(e) => setEmail(e.target.value)}
