@@ -5,9 +5,9 @@ import { Dice } from './containers/dice';
 import { Newsletter } from './containers/newsletter';
 
 const App = () => (
-  <div style={{ 'height': '100vh' }}>
+  <div className="h-100">
     <div className="h-100">
-      <Nav />
+      {/* <Nav /> */}
       <Dice />
       <Newsletter />
     </div>
