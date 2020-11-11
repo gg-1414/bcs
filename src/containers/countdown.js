@@ -1,9 +1,8 @@
-import React from "react";
-import CountdownTimer from "react-component-countdown-timer";
+import React from 'react';
 
 export const Countdown = () => (
   <div className="d-flex justify-content-center">
-    <CountdownTimer count={1400000} showTitle dayTitle={"Days"} responsive size={40} labelSize={14} color="#fff" backgroundColor="#000" />
+  <Countdown date={("2020-11-27")} />
   </div>
 );
 
