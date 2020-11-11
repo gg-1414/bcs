@@ -5,7 +5,7 @@ export const Newsletter = () => (
     <>
         <div className="d-block d-sm-none">
             <div className="d-flex flex-column justify-content-center align-items-center p-4">
-                <p>Wanna be on the list?</p>
+                <h4>Wanna be on the list?</h4>
                 <Signup />
             </div>
         </div>
