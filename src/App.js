@@ -3,14 +3,14 @@ import './App.scss';
 import { Nav } from './containers/nav';
 import { Dice } from './containers/dice';
 import { Newsletter } from './containers/newsletter';
-import { Countdown } from './containers/countdown';
+import { CountdownClock } from './containers/countdown-clock';
 
 const App = () => (
   <div className="h-100">
     <div className="h-100">
       <Nav />
       <Dice />
-      <Countdown />
+      <CountdownClock />
       <Newsletter />
     </div>
   </div>
