@@ -7,7 +7,7 @@ import { Newsletter } from './containers/newsletter';
 const App = () => (
   <div className="h-100">
     <div className="h-100">
-      test
+      test1
       <Nav />
       <Dice />
       <Newsletter />
