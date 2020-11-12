@@ -10,9 +10,13 @@ export const Newsletter = () => (
             </div>
         </div>
         <div className="d-none d-sm-block">
-            <div className="d-flex flex-column justify-content-center align-items-center p-3">
-                <h4 className="p-2">Wanna be on the list?</h4>
-                <Signup />
+            <div className="d-flex justify-content-center align-items-center">
+                <div className="card border-0 bg-transparent" style={{ width: '15rem' }}>
+                    <div className="card-body">
+                        <center><p className="card-title" style={{ fontSize: '20px' }}>Wanna be on the list?</p></center>
+                        <Signup />
+                    </div>
+                </div>
             </div>
         </div>
     </>
