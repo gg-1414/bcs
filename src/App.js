@@ -4,13 +4,17 @@ import { Nav } from './containers/nav';
 import { Dice } from './containers/dice';
 import { Newsletter } from './containers/newsletter';
 import { CountdownClock } from './containers/countdown-clock';
+import moment from 'moment';
 
 const App = () => (
   <div className="h-100">
     <div className="h-100">
       <Nav />
       <Dice />
-      <CountdownClock />
+      {moment() !== moment("2020-11-27T15:00:00") ?
+        <CountdownClock />
+        : null
+      }
       <Newsletter />
     </div>
   </div>
