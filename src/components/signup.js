@@ -25,7 +25,7 @@ export const Signup = () => {
                         value={firstName}
                     />
                 </div>
-                <div className="form-group">
+                <div className="col form-group">
                     <Input
                         type="text"
                         name="lastName"
