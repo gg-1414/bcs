@@ -11,7 +11,7 @@ const App = () => (
     <div className="h-100">
       <Nav />
       <Dice />
-      {moment() !== moment("2020-11-27T15:00:00") ?
+      {moment() !== moment("2020-11-27T11:00:00").local() ?
         <CountdownClock />
         : null
       }
