@@ -6,9 +6,9 @@ const Footer = () => {
     <footer>
       <p>© 2020  Best Case Scenario</p>
       <div>
-        <a href="#">TERMS</a>
-        <a href="#">PRIVACY</a>
-        <a href="#">SIGN UP</a>
+        <a href="bestcasescenario.nyc">TERMS</a>
+        <a href="bestcasescenario.nyc">PRIVACY</a>
+        <a href="bestcasescenario.nyc">SIGN UP</a>
       </div>
     </footer>
   )
