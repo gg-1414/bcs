@@ -29,7 +29,7 @@ class Header extends React.Component {
   }
 
   render() {
-    const { isMenuOpen, handleMenuToggle } = this.props; 
+    const { handleCartToggle, isMenuOpen, handleMenuToggle } = this.props; 
 
     return (
       <Router>
@@ -71,7 +71,7 @@ class Header extends React.Component {
               )}
             </Media>
 
-            <button className="Header--view-cart">
+            <button className="Header--view-cart" onClick={handleCartToggle}>
               <CartIcon/>
             </button>
           </nav>

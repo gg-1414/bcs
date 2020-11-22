@@ -14,7 +14,7 @@ class App extends Component {
       isMenuOpen: false,
     };
 
-    this.handleCartClose = this.handleCartClose.bind(this);
+    this.handleCartToggle = this.handleCartToggle.bind(this);
     this.addVariantToCart = this.addVariantToCart.bind(this);
     this.updateQuantityInCart = this.updateQuantityInCart.bind(this);
     this.removeLineItemInCart = this.removeLineItemInCart.bind(this);
@@ -78,9 +78,10 @@ class App extends Component {
     });
   }
 
-  handleCartClose() {
+  handleCartToggle(event) {
+    console.log('event.target',event.target)
     this.setState({
-      isCartOpen: false,
+      isCartOpen: !this.state.isCartOpen,
     });
   }
 
@@ -108,13 +109,14 @@ class App extends Component {
           products={this.state.products}
           client={this.props.client}
           addVariantToCart={this.addVariantToCart}
+          handleCartToggle={this.handleCartToggle}
           isMenuOpen={this.state.isMenuOpen}
           handleMenuToggle={this.handleMenuToggle}
         />
         <Cart
           checkout={this.state.checkout}
           isCartOpen={this.state.isCartOpen}
-          handleCartClose={this.handleCartClose}
+          handleCartToggle={this.handleCartToggle}
           updateQuantityInCart={this.updateQuantityInCart}
           removeLineItemInCart={this.removeLineItemInCart}
         />

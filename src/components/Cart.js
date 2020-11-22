@@ -29,7 +29,7 @@ class Cart extends Component {
         <header className="Cart__header">
           <h2>Your cart</h2>
           <button
-            onClick={this.props.handleCartClose}
+            onClick={this.props.handleCartToggle}
             className="Cart__close">
             ×
           </button>
