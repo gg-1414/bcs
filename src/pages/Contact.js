@@ -12,7 +12,7 @@ const Contact = () => {
     <section className="Contact">
       <div className="container">
         <div className="image-block">
-          <img src={ContactImg} />
+          <img src={ContactImg} alt="Contact page image" />
         </div>
         <p className="email">info@bestcasescenario.nyc</p>
         <form onSubmit={onSubmit}>
