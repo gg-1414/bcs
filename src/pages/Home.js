@@ -1,5 +1,6 @@
 import React from 'react';
 import diceGif from '../assets/images/dice.gif';
+import '../styles/pages/Home.scss';
 
 const Home = () => {
   return (
