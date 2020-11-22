@@ -1,0 +1,161 @@
+.Header,
+.MobileMenu {
+  a {
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.5rem;
+    text-decoration: none;
+    &:hover {
+      color: white;
+    }
+    &.active {
+      text-decoration: line-through;
+    }
+  }
+}
+
+.Header {
+  padding: 16px 8px;
+  
+  nav {
+    position: relative;
+    height: 96px;
+  }
+  a {
+    font-size: 16px;
+  }
+  .logo {
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    img {
+      height: 100%;
+    }
+  }
+
+  .Header--view-cart {
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+    transform: translateY(-50%);
+    padding: 0;
+    width: 32px;
+    height: 32px;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  @media (min-width: 768px) {
+    img {
+      height: 120px;
+    }
+  }
+}
+
+.MobileMenu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: black;
+  height: 100vh;
+  text-align: left;
+  padding: 2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.3s ease-in-out;
+  z-index: 5;
+
+  &.open {
+    transform: translateX(0);
+  }
+  &.closed {
+    transform: translateX(-100%);
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  a {
+    font-size: 2rem;
+    padding: 2rem 0;
+  }
+  
+  @media (max-width: 767px) {
+    width: 100%;
+
+    a {
+      font-size: 1.5rem;
+      text-align: center;
+    }
+  }
+}
+
+.HamburgerButton {
+  position: absolute;
+  top: 50%;
+  left: 2rem;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+
+  &.open {
+    div { 
+      &:first-child {
+        transform: rotate(45deg);
+      }
+      &:nth-child(2) {
+        opacity: 0;
+        transform: translateX(20px);
+      }
+      &:nth-child(3) {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  &.closed {
+    div {
+      &:first-child {
+        transform: rotate(0);
+      }
+      &:nth-child(2) {
+        opacity: 1;
+        transform: translateX(0);
+      }
+      &:nth-child(3) {
+        transform: rotate(0);
+      }
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+  
+  div {
+    width: 2rem;
+    height: 0.25rem;
+    background: white;
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
+  }
+}

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Products from './components/Products';
 import Cart from './components/Cart';
-
+import Header from './components/Header';
+import './App.scss';
 class App extends Component {
   constructor() {
     super();
@@ -10,13 +10,16 @@ class App extends Component {
       isCartOpen: false,
       checkout: { lineItems: [] },
       products: [],
-      shop: {}
+      shop: {},
+      isMenuOpen: false,
     };
 
     this.handleCartClose = this.handleCartClose.bind(this);
     this.addVariantToCart = this.addVariantToCart.bind(this);
     this.updateQuantityInCart = this.updateQuantityInCart.bind(this);
     this.removeLineItemInCart = this.removeLineItemInCart.bind(this);
+
+    this.handleMenuToggle = this.handleMenuToggle.bind(this);
   }
 
   componentWillMount() {
@@ -81,10 +84,16 @@ class App extends Component {
     });
   }
 
+  handleMenuToggle() {
+    this.setState({
+      isMenuOpen: !this.state.isMenuOpen,
+    })
+  }
+
   render() {
     return (
       <div className="App">
-        <header className="App__header">
+        {/* <header className="App__header">
           {!this.state.isCartOpen &&
             <div className="App__view-cart-wrapper">
               <button className="App__view-cart" onClick={()=> this.setState({isCartOpen: true})}>Cart</button>
@@ -94,11 +103,13 @@ class App extends Component {
             <h1>{this.state.shop.name}: React Example</h1>
             <h2>{this.state.shop.description}</h2>
           </div>
-        </header>
-        <Products
+        </header> */}
+        <Header
           products={this.state.products}
           client={this.props.client}
           addVariantToCart={this.addVariantToCart}
+          isMenuOpen={this.state.isMenuOpen}
+          handleMenuToggle={this.handleMenuToggle}
         />
         <Cart
           checkout={this.state.checkout}
