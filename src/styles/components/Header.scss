@@ -1,18 +1,9 @@
 .Header,
 .MobileMenu {
   a {
-    color: white;
-    text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 0.5rem;
-    text-decoration: none;
-    &:hover {
-      color: white;
-    }
-    &:hover,
-    &.active {
-      text-decoration: line-through;
-    }
+    font-size: 24px;
   }
 }
 
@@ -22,10 +13,6 @@
   nav {
     position: relative;
     height: 96px;
-  }
-
-  a {
-    font-size: 16px;
   }
 
   .logo {
@@ -167,7 +154,6 @@
   }
 
   a {
-    font-size: 2rem;
     padding: 2rem 0;
     text-align: center;
   }
