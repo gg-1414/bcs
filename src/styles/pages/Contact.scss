@@ -6,6 +6,9 @@
     font-size: 18px;
     font-weight: bold;
   }
+  img {
+    margin: 0 auto;
+  }
   p {
     text-align: center;
     padding: 16px 0 0;
@@ -45,5 +48,8 @@
   }
   button {
     background: white;
+    max-width: 248px;
+    width: 100%;
+    margin-left: auto;
   }
 }
