@@ -144,6 +144,7 @@
   justify-content: center;
   background: black;
   height: 100vh;
+  width: 100%;
   text-align: left;
   padding: 2rem;
   position: absolute;
@@ -167,14 +168,6 @@
   a {
     font-size: 2rem;
     padding: 2rem 0;
-  }
-  
-  @media (max-width: 767px) {
-    width: 100%;
-
-    a {
-      font-size: 1.5rem;
-      text-align: center;
-    }
+    text-align: center;
   }
 }
