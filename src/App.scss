@@ -14,6 +14,10 @@ button {
   border: none;
 }
 
+p {
+  line-height: 1.2;
+}
+
 // Media Query
 @media only screen and (max-width: 700px) {
   .dice {
