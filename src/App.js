@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Cart from './components/Cart';
 import Header from './components/Header';
+import Footer from './components/Footer';
 import './App.scss';
 class App extends Component {
   constructor() {
@@ -120,6 +121,7 @@ class App extends Component {
           updateQuantityInCart={this.updateQuantityInCart}
           removeLineItemInCart={this.removeLineItemInCart}
         />
+        <Footer/>
       </div>
     );
   }
