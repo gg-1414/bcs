@@ -35,7 +35,7 @@ class Header extends React.Component {
       <Router>
         <header className="Header">
           <nav>
-            <Media query="(max-width: 767px)">
+            <Media query="(max-width: 1279px)">
               {matches => (
                 matches ? (
                   <button 
@@ -51,23 +51,23 @@ class Header extends React.Component {
                     <button className="Header--view-cart" style={{visibility:"hidden"}}>
                       <CartIcon/>
                     </button>
-                    <Link to="/lookbook">Lookbook</Link>
-                    <Link to="/shop">Shop</Link>
+                    <NavLink to="/lookbook">Lookbook</NavLink>
+                    <NavLink to="/shop">Shop</NavLink>
                   </>
                 )
               )}
             </Media>
 
-            <Link to="/" className="logo">
+            <NavLink to="/" className="logo">
               <img src={logo} alt="Best Case Scenario logo"/>
-            </Link>
+            </NavLink>
 
-            <Media query="(min-width: 768px)">
+            <Media query="(min-width: 1280px)">
               {matches => (
                 matches ? (
                   <>
-                    <Link to="/about">About</Link>
-                    <Link to="/contact">Contact</Link>
+                    <NavLink to="/about">About</NavLink>
+                    <NavLink to="/contact">Contact</NavLink>
                   </>
                 ) : null
               )}
@@ -79,7 +79,7 @@ class Header extends React.Component {
           </nav>
         </header>
 
-        <Media query="(max-width: 767px)">
+        <Media query="(max-width: 1279px)">
           {matches => (
             matches ? (
               <div className={isMenuOpen ? "MobileMenu open" : "MobileMenu closed"}>

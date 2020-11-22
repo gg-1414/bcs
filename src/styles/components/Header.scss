@@ -29,9 +29,12 @@
 
   .logo {
     height: 100%;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+
+    @media (max-width: 1279px) {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
 
     img {
       height: 100%;
@@ -100,13 +103,16 @@
   }
 
   .Header--view-cart {
-    position: absolute;
-    top: 50%;
-    right: 2rem;
-    transform: translateY(-50%);
     padding: 0;
     width: 32px;
     height: 32px;
+
+    @media (max-width: 1279px) {
+      position: absolute;
+      top: 50%;
+      right: 2rem;
+      transform: translateY(-50%);
+    }
 
     > * {
       pointer-events: none;
@@ -118,7 +124,14 @@
     }
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 1280px) {
+    nav {
+      height: 152px;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+
     img {
       height: 120px;
     }
