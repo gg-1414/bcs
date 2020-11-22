@@ -58,7 +58,9 @@ class Header extends React.Component {
               )}
             </Media>
 
-            <Link to="/" className="logo"><img src={logo} alt="Best Case Scenario logo"/></Link>
+            <Link to="/" className="logo">
+              <img src={logo} alt="Best Case Scenario logo"/>
+            </Link>
 
             <Media query="(min-width: 768px)">
               {matches => (
