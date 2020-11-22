@@ -1,0 +1,49 @@
+.Contact {
+  p,
+  input,
+  textarea,
+  button {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  p {
+    text-align: center;
+    padding: 16px 0 0;
+  }
+  form {
+    display: flex;
+    flex-direction: column; 
+    margin-top: 64px;
+
+    input,
+    textarea,
+    button {
+      border: 5px solid white;
+      padding: 24px;
+      background-color: black;
+      color: white;
+      text-transform: uppercase;
+    }
+
+    input,
+    textarea {
+      margin-bottom: 16px;
+      flex: 1;
+
+      &:focus {
+        outline: none;
+      }
+
+      &::-webkit-input-placeholder {
+        color: white;
+      }
+    }
+
+    textarea {
+      min-height: 225px;
+    }
+  }
+  button {
+    background: white;
+  }
+}

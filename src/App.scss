@@ -9,6 +9,16 @@ body {
   height: 350px;
 }
 
+section {
+  padding: 40px 0;
+  @media (min-width: 768px) {
+    padding: 48px 0;
+  }
+  @media (min-width: 1280px) {
+    padding: 40px 0;
+  }
+}
+
 button {
   background: none;
   border: none;

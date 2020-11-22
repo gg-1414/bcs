@@ -4,7 +4,7 @@ import '../styles/pages/About.scss';
 
 const About = () => {
   return (
-    <div className="About">
+    <section className="About">
       <div className="container">
         <div className="image-block">
           <img src={aboutImg} />
@@ -16,7 +16,7 @@ const About = () => {
           <p>Founded with finesse in New York City, Best Case Scenario stands on an uncompromising enthusiasm for authenticity and free-thinking. The popularity contest ends with BCS. If you validate yourself and don’t need anyone else to notice - you’ll love it here!</p>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 
