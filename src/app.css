@@ -275,22 +275,6 @@
    cursor: pointer;
  }
  
- /* PRODUCTS
-  * ============================== */
- 
- 
- .Product__option {
-   display: block;
-   width: 100%;
-   margin-bottom: 10px;
- }
- 
- .Product__quantity {
-   display: block;
-   width: 15%;
-   margin-bottom: 10px;
- }
- 
  /* CUSTOMER AUTH
   * ============================== */
  .CustomerAuth {
