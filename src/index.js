@@ -8,8 +8,8 @@ import './app.css'
 
 // Initializing a client to return content in the store's primary language
 const client = Client.buildClient({
-  domain: 'test-bcs.myshopify.com',
-  storefrontAccessToken: '993c1dbeb63d365ea563131a3de17654'
+  domain: 'best-case-scenario-nyc.myshopify.com',
+  storefrontAccessToken: '4e94632ef345be02a7492f55a4d97b2e'
 });
 
 ReactDOM.render(
