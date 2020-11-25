@@ -1,3 +1,24 @@
 .Shop {
-  padding: 16px;
+  padding: 40px 20px;
+
+  .Product {
+    margin-bottom: 32px;
+  }
+
+  .Product__title,
+  .Product__price {
+    font-weight: 700;
+  }
+
+  .Product__title {
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-top: 24px;
+    margin: 24px auto 4px;
+  }
+
+  .Product__price {
+    margin: 0 auto;
+    font-size: 20px;
+  }
 }
