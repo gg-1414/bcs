@@ -1,9 +1,8 @@
-footer {
+.Footer {
   text-align: center;
   padding: 16px;
   p, a {
-    font-weight: bold;
-    font-size: 16px;
+    font-size: 18px;
   }
   p {
     margin-bottom: 8px;
@@ -12,9 +11,12 @@ footer {
     margin: 0 8px;
     color: white;
   }
-  @media (min-width: 1280px) {
-    p, a {
-      font-size: 20px;
+  @media (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    p {
+      margin: 0;
     }
   }
 }
