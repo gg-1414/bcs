@@ -1,5 +1,50 @@
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
 
+@font-face {
+  font-family: 'MADE Soulmaze';
+  src: url('./assets/fonts/MADESoulmaze.woff2') format('woff2'),
+      url('./assets/fonts/MADESoulmaze.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MADE Soulmaze Outline';
+  src: url('./assets/fonts/MADESoulmazeOutline.woff2') format('woff2'),
+      url('./assets/fonts/MADESoulmazeOutline.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MADE Soulmaze Brush';
+  src: url('./assets/fonts/MADESoulmazeBrush.woff2') format('woff2'),
+      url('./assets/fonts/MADESoulmazeBrush.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MADE Soulmaze';
+  src: url('./assets/fonts/MADESoulmaze-Italic.woff2') format('woff2'),
+      url('./assets/fonts/MADESoulmaze-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MADE Soulmaze Outline';
+  src: url('./assets/fonts/MADESoulmazeOutline-Italic.woff2') format('woff2'),
+      url('./assets/fonts/MADESoulmazeOutline-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
 body {
   background-color: black;
   color: white;
