@@ -2,9 +2,9 @@ import React from 'react';
 
 const Lookbook = () => {
   return (
-    <div className="Lookbook">
+    <section className="Lookbook">
       lookbook
-    </div>
+    </section>
   )
 }
 

@@ -50,16 +50,23 @@ body {
   color: white;
 }
 
+.App {
+  width: 100%;
+}
+
 .dice {
   height: 350px;
 }
 
 section {
   padding: 40px 0;
+  min-height: calc(100vh - 216px); // 100vh - (.Header height + .Footer height)
   @media (min-width: 768px) {
+    min-height: calc(100vh - 187px); // 100vh - (.Header height + .Footer height)
     padding: 48px 0;
   }
   @media (min-width: 1280px) {
+    min-height: calc(100vh - 243px); // 100vh - (.Header height + .Footer height)
     padding: 40px 0;
   }
 }
