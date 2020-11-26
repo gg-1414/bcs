@@ -45,24 +45,6 @@ class ProductDetails extends Component {
     return indices;
   }
 
-  componentDidMount() {
-    console.log('this.props.product',this.props.product)
-    const product = this.props.product.description
-    const descriptionIndex =  this.props.product.description.indexOf('Description')
-    const detailsIndex = this.props.product.description.indexOf('Details:')
-    console.log('detailsIndex',detailsIndex)
-    const details = this.props.product.description.substr(detailsIndex, this.props.product.description.length)
-    console.log('details',details)
-
-    const detailIndices = this.getIndicesOf('_Detail_:', this.props.product.description)
-    const descriptionIndices = this.getIndicesOf('_Description_:', this.props.product.description)
-
-    console.log('descriptionIndices',descriptionIndices)
-    console.log('detailIndices',detailIndices)
-    console.log(product.substr(descriptionIndices[0] + '_Description_'.length + 2, descriptionIndices[1]))
-    console.log(product.substr(descriptionIndices[1] + '_Description_'.length + 2, detailIndices[0]))
-  }
-
   findImage(images, variantId) {
     const primary = images[0];
 
@@ -102,6 +84,26 @@ class ProductDetails extends Component {
       );
     });
 
+    let description1, description2, details;
+
+    const productInfoKeys = 'Description_1|Description_2|Details'.split('|')
+
+    productInfoKeys.forEach(key => {
+      const splitKey = `~*~${key}~*~`
+      if (this.props.product.description.indexOf('---')) {
+        if (key === 'Description_1') {
+          const description1Arr = this.props.product.description.split(splitKey)
+          description1 = description1Arr[description1Arr.length - 1].split('---')[0]
+        } else if (key === 'Description_2') {
+          const description2Arr = this.props.product.description.split(splitKey)
+          description2 = description2Arr[description2Arr.length - 1].split('---')[0]
+        } else if (key === 'Details') {
+          const detailsArr = this.props.product.description.split(splitKey)
+          details = detailsArr[detailsArr.length - 1].split('---')[0]
+        }
+      }
+    })
+
     return (
       <div className="Product__details">
         {this.props.product.images.length 
@@ -111,7 +113,8 @@ class ProductDetails extends Component {
 
         <h5 className="Product__title">{this.props.product.title}</h5>
         <p className="Product__price">${variant.price}</p>
-        <p>{this.props.product.description}</p>
+        <p>{description1}</p>
+        <p>{description2}</p>
 
         {variantSelectors}
 
