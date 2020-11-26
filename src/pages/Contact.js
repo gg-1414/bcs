@@ -6,7 +6,7 @@ const Contact = () => {
   return (
     <section className="Contact">
       <div className="container">
-        <a href="https://www.instagram.com/bestcasescenarionyc" target="_blank">
+        <a href="https://www.instagram.com/bestcasescenarionyc" target="_blank" rel="noopener noreferrer">
           <img src={IGIcon} alt="Instagram icon" />
         </a>
         <p className="email">info@bestcasescenario.nyc</p>
