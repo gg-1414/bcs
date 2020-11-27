@@ -2,11 +2,8 @@ import React from 'react';
 import Media from 'react-media';
 import {
   ButtonBack,
-  ButtonFirst,
-  ButtonLast,
   ButtonNext,
   CarouselProvider,
-  DotGroup,
   Image,
   Slide,
   Slider,
