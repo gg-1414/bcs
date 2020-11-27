@@ -1,0 +1,159 @@
+.Header,
+.MobileMenu {
+  a {
+    font-family: 'MADE Soulmaze', monospace;
+    font-size: 24px;
+  }
+}
+
+.Header {
+  padding: 16px 8px;
+  
+  nav {
+    position: relative;
+    height: 96px;
+  }
+
+  .logo {
+    height: 100%;
+
+    @media (max-width: 1279px) {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    img {
+      height: 100%;
+    }
+  }
+
+  .HamburgerButton {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 2rem;
+    height: 2rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10;
+  
+    &.open {
+      div { 
+        &:first-child {
+          transform: rotate(45deg);
+        }
+        &:nth-child(2) {
+          opacity: 0;
+          transform: translateX(20px);
+        }
+        &:nth-child(3) {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  
+    &.closed {
+      div {
+        &:first-child {
+          transform: rotate(0);
+        }
+        &:nth-child(2) {
+          opacity: 1;
+          transform: translateX(0);
+        }
+        &:nth-child(3) {
+          transform: rotate(0);
+        }
+      }
+    }
+  
+    &:focus {
+      outline: none;
+    }
+    
+    div {
+      width: 2rem;
+      height: 0.25rem;
+      background: white;
+      border-radius: 10px;
+      transition: all 0.3s linear;
+      position: relative;
+      transform-origin: 1px;
+    }
+  }
+
+  .Header--view-cart {
+    padding: 0;
+    width: 40px;
+    height: 40px;
+
+    @media (max-width: 1279px) {
+      position: absolute;
+      top: 50%;
+      right: 1rem;
+      transform: translateY(-50%);
+    }
+
+    > * {
+      pointer-events: none;
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    nav {
+      height: 152px;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+
+    img {
+      height: 120px;
+    }
+  }
+}
+
+.MobileMenu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: black;
+  height: 100vh;
+  width: 100%;
+  text-align: left;
+  padding: 2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.3s ease-in-out;
+  z-index: 5;
+
+  &.open {
+    transform: translateX(0);
+  }
+  &.closed {
+    transform: translateX(-100%);
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  a {
+    padding: 1.5rem 0;
+    text-align: center;
+  }
+}

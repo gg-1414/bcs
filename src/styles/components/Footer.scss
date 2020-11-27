@@ -1,0 +1,22 @@
+.Footer {
+  text-align: center;
+  padding: 16px;
+  p, a {
+    font-size: 18px;
+  }
+  p {
+    margin-bottom: 8px;
+  }
+  a {
+    margin: 0 8px;
+    color: white;
+  }
+  @media (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    p {
+      margin: 0;
+    }
+  }
+}

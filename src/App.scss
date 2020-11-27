@@ -1,22 +1,124 @@
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700');
+
+@font-face {
+  font-family: 'MADE Soulmaze';
+  src: url('./assets/fonts/MADESoulmaze.woff2') format('woff2'),
+      url('./assets/fonts/MADESoulmaze.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MADE Soulmaze Outline';
+  src: url('./assets/fonts/MADESoulmazeOutline.woff2') format('woff2'),
+      url('./assets/fonts/MADESoulmazeOutline.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MADE Soulmaze Brush';
+  src: url('./assets/fonts/MADESoulmazeBrush.woff2') format('woff2'),
+      url('./assets/fonts/MADESoulmazeBrush.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MADE Soulmaze';
+  src: url('./assets/fonts/MADESoulmaze-Italic.woff2') format('woff2'),
+      url('./assets/fonts/MADESoulmaze-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MADE Soulmaze Outline';
+  src: url('./assets/fonts/MADESoulmazeOutline-Italic.woff2') format('woff2'),
+      url('./assets/fonts/MADESoulmazeOutline-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* INITIALIZERS + DEFAULTS
+ * ============================== */
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+* {
+  font-family: Roboto;
+}
 
 body {
   background-color: black;
   color: white;
 }
 
+.App {
+  width: 100%;
+}
+
 .dice {
   height: 350px;
 }
 
-// Media Query
+section {
+  padding: 40px 0;
+  min-height: calc(100vh - 216px); // 100vh - (.Header height + .Footer height)
+  @media (min-width: 768px) {
+    min-height: calc(100vh - 187px); // 100vh - (.Header height + .Footer height)
+    padding: 48px 0;
+  }
+  @media (min-width: 1280px) {
+    min-height: calc(100vh - 243px); // 100vh - (.Header height + .Footer height)
+    padding: 40px 0;
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+button {
+  background: none;
+  border: none;
+  color: white;
+}
+
+p {
+  line-height: 1.2;
+}
+
+a {
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  &:hover {
+    color: white;
+  }
+  &:hover,
+  &.active {
+    text-decoration: line-through;
+  }
+}
+
 @media only screen and (max-width: 700px) {
   .dice {
     height: 200px;
   }
 
   .mobile-form {
-    padding: 0px 80px;
+    padding: 0px;
     font-size: 20px;
   }
 }
