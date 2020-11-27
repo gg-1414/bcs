@@ -1,0 +1,69 @@
+.Lookbook {
+  &,
+  .container {
+    display: flex;
+  }
+
+  .container {
+    justify-content: center;
+    align-items: center;
+    @media (min-width: 1280px) {
+      max-width: 1280px;
+    }
+  }
+  
+  .carousel {
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 58px auto 58px;
+    grid-template-areas: "backBtn carousel nextBtn";
+
+    > * { overflow: hidden; }
+
+    @media (min-width: 768px) {
+      grid-template-columns: 105px auto 105px;
+      max-height: 656px;
+    }
+  }
+
+  .carousel__slider {
+    grid-area: carousel;
+  }
+  .carousel__back-button,
+  .carousel__next-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    &:focus {
+      outline: none;
+    }
+    &:disabled {
+      opacity: 0.5;
+    }
+    img {
+      position: absolute;
+      width: 46px;
+      height: 33px;
+    }
+  }
+  .carousel__back-button {
+    grid-area: backBtn;
+    @media (min-width: 1280px) {
+      justify-content: flex-start;
+    }
+  }
+  .carousel__next-button {
+    grid-area: nextBtn;
+    @media (min-width: 1280px) {
+      justify-content: flex-end;
+    }
+  }
+  ul.sliderTray___-vHFQ {
+    display: flex;
+    padding: 0;
+
+    a {
+      padding-bottom: 0;
+    }
+  }
+}
