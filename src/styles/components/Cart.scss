@@ -11,7 +11,7 @@
     background-color: black;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 82px 1fr 284px;
+    grid-template-rows: 82px 1fr 240px;
     border-left: 4px solid white;
     transform: translateX(100%);
     transition: transform 0.15s ease-in-out;
@@ -25,13 +25,19 @@
   .Cart__close {
     position: absolute;
     right: 9px;
-    top: 8px;
-    font-size: 35px;
+    top: 50%;
+    transform: translateY(-50%);
     color: white;
     border: none;
     background: transparent;
     transition: transform 100ms ease;
     cursor: pointer;
+    font-size: 64px;
+    font-weight: 900;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   .Cart__header {
@@ -39,9 +45,11 @@
     border-bottom: 4px solid white;
     flex: 0 0 auto;
     display: inline-block;
+    position: relative;
 
     h2 {
       margin-bottom: 0;
+      font-weight: 900;
     }
   }
   
@@ -70,7 +78,7 @@
   }
   
   .Cart-info {
-    padding: 8px 20px 8px;
+    padding: 4px 20px 4px;
   }
   
   .Cart-info__total {
@@ -106,12 +114,13 @@
 .Line-item__img {
   width: 65px;
   height: 65px;
-  border-radius: 3px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
   background-color: #e5e5e5;
   position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .Line-item__content {
@@ -129,13 +138,15 @@
 .Line-item__variant-title {
   float: right;
   font-weight: bold;
-  font-size: 11px;
+  font-size: 12px;
   line-height: 17px;
+  padding: 0 8px;
 }
 
 .Line-item__title {
   font-size: 15px;
-  font-weight: 400;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .Line-item__price {
@@ -149,7 +160,6 @@
 .Line-item__quantity-container {
   border: 1px solid white;
   float: left;
-  border-radius: 3px;
 }
 
 .Line-item__quantity-update {
