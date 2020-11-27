@@ -17,7 +17,9 @@ class Products extends Component {
     });
 
     return (
-      <div className="Product-wrapper">
+      <div 
+        className={`Product-wrapper grid-rows-${this.props.products.length}`}
+      >
         <div className="container">
           {products}
         </div>

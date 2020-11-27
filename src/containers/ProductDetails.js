@@ -110,8 +110,7 @@ class ProductDetails extends Component {
             {this.props.product.images.length
               ? <Carousel images={images} 
                   thumb={true}
-                  loop={false}
-                  autoplay={false}/>
+                  loop={false}/>
               : null
             }
           </div>
