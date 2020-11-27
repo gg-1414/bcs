@@ -32,7 +32,7 @@ class ProductDetails extends Component {
 
   getIndicesOf(searchStr, str, caseSensitive) {
     var searchStrLen = searchStr.length;
-    if (searchStrLen == 0) {
+    if (searchStrLen === 0) {
         return [];
     }
     var startIndex = 0, index, indices = [];
