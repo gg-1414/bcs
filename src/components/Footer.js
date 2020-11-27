@@ -8,7 +8,7 @@ const Footer = () => {
       <div>
         <a href="bestcasescenario.nyc">TERMS</a>
         <a href="bestcasescenario.nyc">PRIVACY</a>
-        <a href="bestcasescenario.nyc">SIGN UP</a>
+        <a href="/">SIGN UP</a>
       </div>
     </footer>
   )

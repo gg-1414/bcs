@@ -47,8 +47,40 @@
     .image-block {
       display: flex;
       justify-content: center;
-      img {
+      .carousel {
+        min-height: 300px;
         width: 100%;
+      }
+      .carousel-main > * {
+        display: flex;
+        height: 100%;
+      }
+      img {
+        height: auto;
+        width: 100%;
+        margin: auto;
+        padding-bottom: 24px;
+      }
+      .carousel-footer {
+        min-height: 75px;
+        width: 100%;
+        padding: 16px;
+        background-color: rgb(255 255 255 / .2);
+        .box {
+          height: 100%;
+          width: 100%;
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          > * {
+            width: 100%;
+            flex: 1;
+          }
+        }
+        .carousel-thumb {
+          background-size: cover;
+          background-repeat: no-repeat;
+          min-height: 75px;
+        }
       }
     }
     .Product__title {

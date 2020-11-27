@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Carousel from 'react-image-carousel';
 import VariantSelector from '../components/VariantSelector';
 import leftArrowIcon from '../assets/images/left-arrow.svg';
 
@@ -79,7 +80,6 @@ class ProductDetails extends Component {
   }
 
   render() {
-    let variantImage = this.state.selectedVariantImage || this.props.product.images[0]
     let variant = this.state.selectedVariant || this.props.product.variants[0]
     let variantQuantity = 1
     let variantSelectors = this.props.product.options.map((option) => {
@@ -93,6 +93,7 @@ class ProductDetails extends Component {
       );
     })
 
+    console.log('this.props.product',this.props.product)
     const { activeContent } = this.state
     const productDescription = this.props.product.descriptionHtml 
     console.log('productDescription',productDescription)
@@ -101,12 +102,19 @@ class ProductDetails extends Component {
     console.log('splitDesc',splitDesc)
     const details = splitDesc[1].slice(0, splitDesc[1].length - 6)
 
+    const images = this.props.product.images.map(image => {
+      return image.src
+    })
+
     return (
       <>
         <div className="Product__details">
           <div className="image-block">
-            {this.props.product.images.length 
-              ? <img src={variantImage.src} alt={`${this.props.product.title} product shot`}/> 
+            {this.props.product.images.length
+              ? <Carousel images={images} 
+                  thumb={true}
+                  loop={false}
+                  autoplay={false}/>
               : null
             }
           </div>
