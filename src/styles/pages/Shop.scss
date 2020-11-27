@@ -52,16 +52,33 @@
       .carousel {
         min-height: 300px;
         width: 100%;
+        @media (max-width: 768px) {
+          max-height: 415px;
+          display: flex;
+          flex-direction: column;
+        }
       }
-      .carousel-main > * {
-        display: flex;
-        height: 100%;
+      .carousel-main {
+        > * {
+          display: flex;
+          height: 100%;
+          overflow: hidden;
+        }
+        @media (max-width: 768px) {
+          flex: 1;
+          max-height: 300px;
+        }
       }
       img {
         height: auto;
         width: 100%;
         margin: auto;
         padding-bottom: 24px;
+        @media (max-width: 768px) {
+          width: auto;
+          height: 100%;
+          max-width: initial;
+        }
       }
       .carousel-footer {
         min-height: 75px;
