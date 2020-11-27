@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import LineItem from './LineItem';
+import '../styles/components/Cart.scss';
 
 class Cart extends Component {
   constructor(props) {
@@ -23,6 +24,7 @@ class Cart extends Component {
         />
       );
     });
+    console.log('line_items',line_items.length)
 
     return (
       <div className={`Cart ${this.props.isCartOpen ? 'Cart--open' : ''}`}>
@@ -35,7 +37,7 @@ class Cart extends Component {
           </button>
         </header>
         <ul className="Cart__line-items">
-          {line_items}
+          {line_items.length >= 1 ? line_items : 'There are no items in your cart'}
         </ul>
         <footer className="Cart__footer">
           <div className="Cart-info clearfix">

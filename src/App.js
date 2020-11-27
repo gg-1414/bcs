@@ -79,8 +79,7 @@ class App extends Component {
     });
   }
 
-  handleCartToggle(event) {
-    console.log('event.target',event.target)
+  handleCartToggle() {
     this.setState({
       isCartOpen: !this.state.isCartOpen,
     });
