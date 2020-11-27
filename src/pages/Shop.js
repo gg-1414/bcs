@@ -28,19 +28,21 @@ class Shop extends React.Component {
 
     return (
       <section className="Shop">
-        {!showProduct
-          ? <Products
-              products={this.props.products}
-              client={this.props.client}
-              addVariantToCart={this.props.addVariantToCart}
-              onProductClick={this.onProductClick}
-            /> 
-          : <ProductDetails
-              product={showProduct}
-              client={this.props.client}
-              addVariantToCart={this.props.addVariantToCart}
-            /> 
-        }
+        <div className="container">
+          {!showProduct
+            ? <Products
+                products={this.props.products}
+                client={this.props.client}
+                addVariantToCart={this.props.addVariantToCart}
+                onProductClick={this.onProductClick}
+              /> 
+            : <ProductDetails
+                product={showProduct}
+                client={this.props.client}
+                addVariantToCart={this.props.addVariantToCart}
+              /> 
+          }
+        </div>
       </section>
     )
   }
