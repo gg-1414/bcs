@@ -12,7 +12,7 @@ import About from '../pages/About';
 import Contact from '../pages/Contact';
 import Home from '../pages/Home';
 import logo from '../assets/images/bcsglobewhite.png';
-import CartIcon from './icons/cart.js';
+import CartIcon from './icons/cartIcon.js';
 import '../styles/components/Header.scss';
 
 class Header extends React.Component {
