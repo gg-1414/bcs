@@ -97,7 +97,7 @@ class ProductDetails extends Component {
     const productDescription = this.props.product.descriptionHtml 
     const splitDesc = productDescription.split("<ul>") || productDescription.split('<ul data-mce-fragment="1">')
     const description = splitDesc[0]
-    const details = splitDesc[1].slice(0, splitDesc[1].length - 6)
+    const details = splitDesc[1] ? splitDesc[1].slice(0, splitDesc[1].length - 6) : ''
 
     const images = this.props.product.images.map(image => {
       return image.src
