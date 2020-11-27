@@ -137,6 +137,8 @@
     .Product__options {
       margin: 24px auto;
       max-width: 252px;
+      display: flex;
+      justify-content: center;
     }
     fieldset {
       display: flex;
