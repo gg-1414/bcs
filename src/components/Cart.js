@@ -24,7 +24,6 @@ class Cart extends Component {
         />
       );
     });
-    console.log('line_items',line_items.length)
 
     return (
       <div className={`Cart ${this.props.isCartOpen ? 'Cart--open' : ''}`}>
