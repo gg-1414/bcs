@@ -12,6 +12,7 @@ class ProductDetails extends Component {
     });
 
     this.state = { 
+      selectedVariant: this.props.product.variants[0],
       selectedOptions: defaultOptionValues,
       activeIndex: 0,
       activeContent: 'description',
@@ -98,6 +99,9 @@ class ProductDetails extends Component {
     const description = splitDesc[0]
     const details = splitDesc[1] ? splitDesc[1].slice(0, splitDesc[1].length - 6) : ''
 
+    console.log('this.props.product',this.props.product)
+    console.log('this.state.selectedVariant',this.state.selectedVariant)
+
     const images = this.props.product.images.map(image => {
       return image.src
     })
@@ -149,12 +153,22 @@ class ProductDetails extends Component {
 
             {variantSelectors}
 
-            <button 
-              className="Product__buy button" 
-              onClick={() => this.props.addVariantToCart(variant.id, variantQuantity)}
-            >
-              ADD TO BAG
-            </button>
+            {this.state.selectedVariant.available
+              ? (
+                <button 
+                  className="Product__buy button" 
+                  onClick={() => this.props.addVariantToCart(variant.id, variantQuantity)}
+                >
+                  ADD TO BAG
+                </button>
+              ) : (
+                <button 
+                  className="Product__buy button" 
+                  disabled
+                >
+                  SOLD OUT
+                </button>
+              )}
             <button className="back-button" onClick={this.props.onBackBtnClick}>
               BACK TO ALL PRODUCTS
             </button>  

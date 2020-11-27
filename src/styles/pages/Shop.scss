@@ -183,6 +183,11 @@
       padding: 24px;
       width: 100%;
       max-width: 409px;
+
+      &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
     }
   }
 
