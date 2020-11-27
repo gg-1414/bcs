@@ -54,6 +54,7 @@ const Lookbook = () => {
               totalSlides={images.length}
               naturalSlideWidth={300}
               naturalSlideHeight={300}
+              infinite={true}
             >
               <Slider>
                 {slides}
@@ -73,6 +74,7 @@ const Lookbook = () => {
               totalSlides={images.length}
               naturalSlideWidth={300}
               naturalSlideHeight={300}
+              infinite={true}
             >
               <Slider>
                 {slides}
@@ -92,6 +94,7 @@ const Lookbook = () => {
               totalSlides={images.length}
               naturalSlideWidth={300}
               naturalSlideHeight={300}
+              infinite={true}
             >
               <Slider>
                 {slides}
