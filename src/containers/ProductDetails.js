@@ -112,7 +112,9 @@ class ProductDetails extends Component {
           </div>
           <div className="content-block">
             <div className="back-button">
-              <button onClick={this.props.onBackBtnClick}><img src={leftArrowIcon}/></button>
+              <button onClick={this.props.onBackBtnClick}>
+                <img src={leftArrowIcon} alt="Go back to shop page" />
+              </button>
             </div>
             <h5 className="Product__title">{this.props.product.title}</h5>
             <p className="Product__price">${variant.price}</p>
