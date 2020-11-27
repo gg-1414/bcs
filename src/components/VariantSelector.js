@@ -2,19 +2,31 @@ import React, {Component} from 'react';
 
 class VariantSelector extends Component {
   render() {
+    const { activeIndex } = this.props;
+
     return (
-      <select
-        className="Product__option"
-        name={this.props.option.name}
-        key={this.props.option.name}
-        onChange={this.props.handleOptionChange}
-      >
-        {this.props.option.values.map((value) => {
-          return (
-            <option value={value} key={`${this.props.option.name}-${value}`}>{`${value}`}</option>
-          )
-        })}
-      </select>
+      <div className="Product__options">
+        <fieldset>
+          {this.props.option.values.map((value, index) => {
+            return (
+              <div 
+                className="Product__option" 
+                key={`${this.props.option.name}-${value}`}
+                style={{border: activeIndex === index ? '1px solid white' : 'none'}}
+              >
+                <input 
+                  type="checkbox" 
+                  name={this.props.option.name} 
+                  value={value}
+                  onChange={this.props.handleOptionChange}
+                  data-id={index}
+                />
+                <label>{`${value}`}</label>
+              </div>
+            )
+          })}
+        </fieldset>
+      </div>
     );
   }
 }

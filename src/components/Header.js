@@ -11,7 +11,6 @@ import Shop from '../pages/Shop';
 import About from '../pages/About';
 import Contact from '../pages/Contact';
 import Home from '../pages/Home';
-import Cart from '../pages/Cart';
 import logo from '../assets/images/bcsglobewhite.png';
 import CartIcon from './icons/cart.js';
 import '../styles/components/Header.scss';
@@ -118,13 +117,6 @@ class Header extends React.Component {
                   >
                     Contact
                   </NavLink>
-                  <NavLink 
-                    exact 
-                    onClick={this.handleClick}
-                    to="/cart"
-                  >
-                    Cart
-                  </NavLink>
                 </nav>
               </div>
             ) : null
@@ -142,7 +134,6 @@ class Header extends React.Component {
           <Route exact path="/lookbook" component={Lookbook}/>
           <Route exact path="/about" component={About}/>
           <Route exact path="/contact" component={Contact}/>
-          <Route exact path="/cart" component={Cart}/>
           <Route path="/" component={Home}/>
         </Switch>
       </Router>

@@ -1,22 +1,26 @@
 import React, { Component } from 'react';
-import Product from '../components/Product';
+import ProductCard from '../components/ProductCard';
 
 class Products extends Component {
   render() {
-    let products = this.props.products.map((product) => {
+    let products = this.props.products.map((product, index) => {
       return (
-        <Product
+        <ProductCard
           addVariantToCart={this.props.addVariantToCart}
           client={this.props.client}
           key={product.id.toString()}
           product={product}
+          onProductClick={this.props.onProductClick}
+          index={index}
         />
       );
     });
 
     return (
       <div className="Product-wrapper">
-        {products}
+        <div className="container">
+          {products}
+        </div>
       </div>
     );
   }

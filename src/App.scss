@@ -1,4 +1,5 @@
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700');
 
 @font-face {
   font-family: 'MADE Soulmaze';
@@ -45,9 +46,24 @@
   font-display: swap;
 }
 
+/* INITIALIZERS + DEFAULTS
+ * ============================== */
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+* {
+  font-family: Roboto;
+}
+
 body {
   background-color: black;
   color: white;
+}
+
+.App {
+  width: 100%;
 }
 
 .dice {
@@ -56,12 +72,21 @@ body {
 
 section {
   padding: 40px 0;
+  min-height: calc(100vh - 216px); // 100vh - (.Header height + .Footer height)
   @media (min-width: 768px) {
+    min-height: calc(100vh - 187px); // 100vh - (.Header height + .Footer height)
     padding: 48px 0;
   }
   @media (min-width: 1280px) {
+    min-height: calc(100vh - 243px); // 100vh - (.Header height + .Footer height)
     padding: 40px 0;
   }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 button {

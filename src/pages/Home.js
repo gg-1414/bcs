@@ -4,9 +4,9 @@ import '../styles/pages/Home.scss';
 
 const Home = () => {
   return (
-    <div className="Home">
+    <section className="Home">
       <img src={diceGif} style={{margin:"auto"}} alt="Home page dice animation"/>
-    </div>
+    </section>
   )
 }
 

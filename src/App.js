@@ -93,8 +93,10 @@ class App extends Component {
   }
 
   render() {
+    const { isMenuOpen } = this.state
+    
     return (
-      <div className="App">
+      <div className="App" style={{position: isMenuOpen ? 'fixed' : null}}>
         {/* <header className="App__header">
           {!this.state.isCartOpen &&
             <div className="App__view-cart-wrapper">
@@ -111,7 +113,7 @@ class App extends Component {
           client={this.props.client}
           addVariantToCart={this.addVariantToCart}
           handleCartToggle={this.handleCartToggle}
-          isMenuOpen={this.state.isMenuOpen}
+          isMenuOpen={isMenuOpen}
           handleMenuToggle={this.handleMenuToggle}
         />
         <Cart

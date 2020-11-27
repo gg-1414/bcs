@@ -15,6 +15,9 @@ const About = () => {
           <p>Designed for girls, inspired by boys.</p>
           <p>Founded with finesse in New York City, Best Case Scenario stands on an uncompromising enthusiasm for authenticity and free-thinking. The popularity contest ends with BCS. If you validate yourself and don’t need anyone else to notice - you’ll love it here!</p>
         </div>
+        <div className="video-block">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/1yXentCIckM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="about"></iframe>
+        </div>
       </div>
     </section>
   )

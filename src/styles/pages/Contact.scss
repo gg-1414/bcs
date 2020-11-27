@@ -1,5 +1,4 @@
 .Contact {
-  min-height: calc(100vh - 216px); // 100vh - (.Header height + .Footer height)
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,11 +11,5 @@
   p {
     font-size: 18px;
     margin: 16px 0 0;
-  }
-  @media (min-width: 768px) {
-    min-height: calc(100vh - 187px); // 100vh - (.Header height + .Footer height)
-  }
-  @media (min-width: 1280px) {
-    min-height: calc(100vh - 243px); // 100vh - (.Header height + .Footer height)
   }
 }
