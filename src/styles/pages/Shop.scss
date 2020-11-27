@@ -66,8 +66,8 @@
         @media (max-width: 768px) {
           > * {
             display: block;
-            flex: 1;
             max-height: 300px;
+            height: 300px;
           }
         }
       }
