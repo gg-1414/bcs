@@ -11,6 +11,8 @@ import Shop from '../pages/Shop';
 import About from '../pages/About';
 import Contact from '../pages/Contact';
 import Home from '../pages/Home';
+import Terms from '../pages/Terms';
+import Privacy from '../pages/Privacy';
 import logo from '../assets/images/bcsglobewhite.png';
 import CartIcon from './icons/cartIcon.js';
 import '../styles/components/Header.scss';
@@ -131,6 +133,8 @@ class Header extends React.Component {
               addVariantToCart={this.props.addVariantToCart}
             />
           </Route>
+          <Route exact path="/terms" component={Terms}/>
+          <Route exact path="/privacy" component={Privacy}/>
           <Route exact path="/lookbook" component={Lookbook}/>
           <Route exact path="/about" component={About}/>
           <Route exact path="/contact" component={Contact}/>
