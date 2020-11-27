@@ -99,9 +99,6 @@ class ProductDetails extends Component {
     const description = splitDesc[0]
     const details = splitDesc[1] ? splitDesc[1].slice(0, splitDesc[1].length - 6) : ''
 
-    console.log('this.props.product',this.props.product)
-    console.log('this.state.selectedVariant',this.state.selectedVariant)
-
     const images = this.props.product.images.map(image => {
       return image.src
     })
