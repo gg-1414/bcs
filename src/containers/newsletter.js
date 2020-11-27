@@ -11,7 +11,7 @@ export const Newsletter = () => (
         </div>
         <div className="d-none d-sm-block">
             <div className="d-flex justify-content-center align-items-center">
-                <div className="card border-0 bg-transparent" style={{ width: '15rem' }}>
+                <div className="card border-0 bg-transparent" style={{ width: '28rem' }}>
                     <div className="card-body">
                         <center><p className="card-title" style={{ fontSize: '20px' }}>Wanna be on the list?</p></center>
                         <Signup />
