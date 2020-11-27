@@ -44,10 +44,6 @@
     font-size: 20px;
   }
 
-  .back-button {
-    margin-top: 48px;
-  }
-
   .Product__details {
     text-align: center;
     .image-block {
@@ -190,6 +186,14 @@
     }
   }
 
+  .back-button {
+    font-size: 16px;
+    font-family: 'MADE Soulmaze', monospace;
+    text-align: center;
+    display: block;
+    margin: 16px auto 0;
+  }
+
   @media (min-width: 768px) {
     padding: 48px 0;
     
@@ -202,6 +206,10 @@
     .Product {
       margin: 0 16px 24px;
       padding-bottom: 48px;
+    }
+
+    .back-button {
+      font-size: 24px;
     }
   }
 
