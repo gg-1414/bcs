@@ -49,6 +49,37 @@
       font-size: 24px;
       padding-bottom: 24px;
     }
+    .Product__description {
+      .description__details--toggle {
+        border-bottom: 2px solid white;
+        display: inline-block;
+        button {
+          color: white;
+          font-size: 20px;
+          opacity: 0.5;
+          transition: opacity 300ms;
+          padding: 8px 12px;
+          font-weight: bold;
+          &.active {
+            opacity: 1;
+          }
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+      .content {
+        margin-top: 24px;
+        .details {
+          padding: 0;
+          li { 
+            list-style: none; 
+            padding-bottom: 12px;
+            font-weight: bold;
+          }
+        }
+      }
+    }
     .Product__options {
       margin: 24px auto;
     }

@@ -13,6 +13,7 @@ class ProductDetails extends Component {
     this.state = { 
       selectedOptions: defaultOptionValues,
       activeIndex: 0,
+      activeContent: 'description',
     };
 
     this.handleOptionChange = this.handleOptionChange.bind(this);
@@ -69,6 +70,13 @@ class ProductDetails extends Component {
     });
   }
 
+  handleContentToggle() {
+    const newState = this.state.activeContent === 'description' ? 'details' : 'description'
+    this.setState({
+      activeContent: newState
+    })
+  }
+
   render() {
     let variantImage = this.state.selectedVariantImage || this.props.product.images[0]
     let variant = this.state.selectedVariant || this.props.product.variants[0]
@@ -82,27 +90,13 @@ class ProductDetails extends Component {
           activeIndex={this.state.activeIndex}
         />
       );
-    });
-
-    let description1, description2, details;
-
-    const productInfoKeys = 'Description_1|Description_2|Details'.split('|')
-
-    productInfoKeys.forEach(key => {
-      const splitKey = `~*~${key}~*~`
-      if (this.props.product.description.indexOf('---')) {
-        if (key === 'Description_1') {
-          const description1Arr = this.props.product.description.split(splitKey)
-          description1 = description1Arr[description1Arr.length - 1].split('---')[0]
-        } else if (key === 'Description_2') {
-          const description2Arr = this.props.product.description.split(splitKey)
-          description2 = description2Arr[description2Arr.length - 1].split('---')[0]
-        } else if (key === 'Details') {
-          const detailsArr = this.props.product.description.split(splitKey)
-          details = detailsArr[detailsArr.length - 1].split('---')[0]
-        }
-      }
     })
+
+    const { activeContent } = this.state
+    const productDescription = this.props.product.descriptionHtml 
+    const splitDesc = productDescription.split("<ul>")
+    const description = splitDesc[0]
+    const details = splitDesc[1].slice(0, splitDesc[1].length - 6)
 
     return (
       <div className="Product__details">
@@ -110,11 +104,37 @@ class ProductDetails extends Component {
           ? <img src={variantImage.src} alt={`${this.props.product.title} product shot`}/> 
           : null
         }
-
+ 
         <h5 className="Product__title">{this.props.product.title}</h5>
         <p className="Product__price">${variant.price}</p>
-        <p>{description1}</p>
-        <p>{description2}</p>
+        <div className="Product__description">
+          <div className="description__details--toggle">
+            <button 
+              className={activeContent === 'description' ? 'active' : ''}
+              onClick={this.handleContentToggle.bind(this)}
+            >
+              DESCRIPTION
+            </button>
+            <button 
+              className={activeContent === 'details' ? 'active' : ''}
+              onClick={this.handleContentToggle.bind(this)}
+            >
+              DETAILS
+            </button>
+          </div>
+          <div className="content">
+            <div 
+              className="description" 
+              dangerouslySetInnerHTML={{ __html: description }}
+              style={{display: activeContent === 'description' ? 'block' : 'none'}}
+            />
+            <ul 
+              className="details" 
+              dangerouslySetInnerHTML={{ __html: details }}
+              style={{display: activeContent === 'details' ? 'block' : 'none'}}
+            />
+          </div>
+        </div>
 
         {variantSelectors}
 
