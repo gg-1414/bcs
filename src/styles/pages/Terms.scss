@@ -1,0 +1,25 @@
+.Terms {
+  h2 {
+    font-size: 40px;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 64px;
+  }
+  h2, p, b {
+    font-family: Roboto;
+  }
+  p {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+  b {
+    display: block;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  a {
+    font-family: 'MADE Soulmaze', monospace;
+    font-size: 16px;
+  }
+}
