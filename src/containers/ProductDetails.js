@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Carousel from 'react-image-carousel';
 import VariantSelector from '../components/VariantSelector';
-import leftArrowIcon from '../assets/images/left-arrow.svg';
 
 class ProductDetails extends Component {
   constructor(props) {
