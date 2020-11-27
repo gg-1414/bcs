@@ -17,10 +17,6 @@
       margin: 0;
       padding: 0;
 
-      &:focus {
-        outline: none;
-      }
-
       > * { pointer-events: none; }
     }
   }
@@ -48,6 +44,13 @@
 
   .Product__details {
     text-align: center;
+    .image-block {
+      display: flex;
+      justify-content: center;
+      img {
+        width: 100%;
+      }
+    }
     .Product__title {
       font-size: 32px;
       margin-top: 32px;
@@ -72,6 +75,9 @@
           font-weight: bold;
           &.active {
             opacity: 1;
+          }
+          &:focus {
+            outline: none;
           }
           @media (min-width: 768px) {
             font-size: 24px;

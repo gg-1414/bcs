@@ -95,8 +95,10 @@ class ProductDetails extends Component {
 
     const { activeContent } = this.state
     const productDescription = this.props.product.descriptionHtml 
-    const splitDesc = productDescription.split("<ul>")
+    console.log('productDescription',productDescription)
+    const splitDesc = productDescription.split("<ul>") || productDescription.split('<ul data-mce-fragment="1">')
     const description = splitDesc[0]
+    console.log('splitDesc',splitDesc)
     const details = splitDesc[1].slice(0, splitDesc[1].length - 6)
 
     return (
