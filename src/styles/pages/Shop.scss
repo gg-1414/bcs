@@ -1,6 +1,10 @@
 .Shop {
   padding: 40px 20px;
 
+  .container {
+    padding: 0;
+  }
+
   .Product {
     margin-bottom: 32px;
 
@@ -38,6 +42,10 @@
     font-size: 20px;
   }
 
+  .back-button {
+    margin-top: 48px;
+  }
+
   .Product__details {
     text-align: center;
     .Product__title {
@@ -64,9 +72,6 @@
           font-weight: bold;
           &.active {
             opacity: 1;
-          }
-          &:focus {
-            outline: none;
           }
           @media (min-width: 768px) {
             font-size: 24px;

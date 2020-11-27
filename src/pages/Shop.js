@@ -12,19 +12,25 @@ class Shop extends React.Component {
     };
 
     this.onProductClick = this.onProductClick.bind(this);
+    this.onBackBtnClick = this.onBackBtnClick.bind(this);
   }
 
   onProductClick(event) {
     const productId = event.target.dataset.productid;
     const product = this.props.products[productId]
     this.setState({
-      showProduct: product
+      showProduct: product,
+    })
+  }
+
+  onBackBtnClick() {
+    this.setState({
+      showProduct: false,
     })
   }
 
   render() {
     const { showProduct } = this.state 
-    console.log('showProduct',showProduct)
 
     return (
       <section className="Shop">
@@ -40,6 +46,7 @@ class Shop extends React.Component {
                 product={showProduct}
                 client={this.props.client}
                 addVariantToCart={this.props.addVariantToCart}
+                onBackBtnClick={this.onBackBtnClick}
               /> 
           }
         </div>

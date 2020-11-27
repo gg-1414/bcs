@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import VariantSelector from '../components/VariantSelector';
+import leftArrowIcon from '../assets/images/left-arrow.svg';
 
 class ProductDetails extends Component {
   constructor(props) {
@@ -99,55 +100,61 @@ class ProductDetails extends Component {
     const details = splitDesc[1].slice(0, splitDesc[1].length - 6)
 
     return (
-      <div className="Product__details">
-        <div className="image-block">
-          {this.props.product.images.length 
-            ? <img src={variantImage.src} alt={`${this.props.product.title} product shot`}/> 
-            : null
-          }
-        </div>
-        <div className="content-block">
-          <h5 className="Product__title">{this.props.product.title}</h5>
-          <p className="Product__price">${variant.price}</p>
-          <div className="Product__description">
-            <div className="description__details--toggle">
-              <button 
-                className={activeContent === 'description' ? 'active' : ''}
-                onClick={this.handleContentToggle.bind(this)}
-              >
-                DESCRIPTION
-              </button>
-              <button 
-                className={activeContent === 'details' ? 'active' : ''}
-                onClick={this.handleContentToggle.bind(this)}
-              >
-                DETAILS
-              </button>
-            </div>
-            <div className="content">
-              <div 
-                className="description" 
-                dangerouslySetInnerHTML={{ __html: description }}
-                style={{display: activeContent === 'description' ? 'block' : 'none'}}
-              />
-              <ul 
-                className="details" 
-                dangerouslySetInnerHTML={{ __html: details }}
-                style={{display: activeContent === 'details' ? 'block' : 'none'}}
-              />
-            </div>
+      <>
+        <div className="Product__details">
+          <div className="image-block">
+            {this.props.product.images.length 
+              ? <img src={variantImage.src} alt={`${this.props.product.title} product shot`}/> 
+              : null
+            }
           </div>
+          <div className="content-block">
+            <div className="back-button">
+              <button onClick={this.props.onBackBtnClick}><img src={leftArrowIcon}/></button>
+            </div>
+            <h5 className="Product__title">{this.props.product.title}</h5>
+            <p className="Product__price">${variant.price}</p>
+            <div className="Product__description">
+              <div className="description__details--toggle">
+                <button 
+                  className={activeContent === 'description' ? 'active' : ''}
+                  onClick={this.handleContentToggle.bind(this)}
+                >
+                  DESCRIPTION
+                </button>
+                <button 
+                  className={activeContent === 'details' ? 'active' : ''}
+                  onClick={this.handleContentToggle.bind(this)}
+                >
+                  DETAILS
+                </button>
+              </div>
+              <div className="content">
+                <div 
+                  className="description" 
+                  dangerouslySetInnerHTML={{ __html: description }}
+                  style={{display: activeContent === 'description' ? 'block' : 'none'}}
+                />
+                <ul 
+                  className="details" 
+                  dangerouslySetInnerHTML={{ __html: details }}
+                  style={{display: activeContent === 'details' ? 'block' : 'none'}}
+                />
+              </div>
+            </div>
 
-          {variantSelectors}
+            {variantSelectors}
 
-          <button 
-            className="Product__buy button" 
-            onClick={() => this.props.addVariantToCart(variant.id, variantQuantity)}
-          >
-            ADD TO BAG
-          </button>
+            <button 
+              className="Product__buy button" 
+              onClick={() => this.props.addVariantToCart(variant.id, variantQuantity)}
+            >
+              ADD TO BAG
+            </button>
+          </div>
         </div>
-      </div>
+
+      </>
     )
   }
 }
