@@ -12,6 +12,7 @@ import About from '../pages/About';
 import Contact from '../pages/Contact';
 import Home from '../pages/Home';
 import Terms from '../pages/Terms';
+import ThankYou from '../pages/ThankYou';
 import Privacy from '../pages/Privacy';
 import logo from '../assets/images/bcsglobewhite.png';
 import CartIcon from './icons/cartIcon.js';
@@ -133,6 +134,7 @@ class Header extends React.Component {
               addVariantToCart={this.props.addVariantToCart}
             />
           </Route>
+          <Route exact path="/thankyou" component={ThankYou}/>
           <Route exact path="/terms" component={Terms}/>
           <Route exact path="/privacy" component={Privacy}/>
           <Route exact path="/lookbook" component={Lookbook}/>
