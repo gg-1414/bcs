@@ -23,10 +23,6 @@
   }
   
   .Cart__close {
-    position: absolute;
-    right: 9px;
-    top: 50%;
-    transform: translateY(-50%);
     color: white;
     border: none;
     background: transparent;
@@ -34,17 +30,20 @@
     cursor: pointer;
     font-size: 64px;
     font-weight: 900;
-    height: 40px;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    line-height: 0;
+    margin: 0;
+    margin-left: auto;
   }
   
   .Cart__header {
     padding: 20px;
     border-bottom: 4px solid white;
     flex: 0 0 auto;
-    display: inline-block;
+    display: flex;
     position: relative;
 
     h2 {
