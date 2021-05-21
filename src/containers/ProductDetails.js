@@ -94,8 +94,17 @@ class ProductDetails extends Component {
     })
 
     const { activeContent } = this.state
-    const productDescription = this.props.product.descriptionHtml 
-    const splitDesc = productDescription.split("<ul>") || productDescription.split('<ul data-mce-fragment="1">')
+    const productDescription = this.props.product.descriptionHtml
+
+    let splitDesc
+    if (productDescription.includes('<ul>')) {
+      splitDesc = productDescription.split("<ul>")
+    } else if (productDescription.includes('<ul data-mce-fragment="1">')) {
+      splitDesc = productDescription.split('<ul data-mce-fragment="1">')
+    } else {
+      splitDesc = productDescription.split('<ul>')
+    }
+
     const description = splitDesc[0]
     const details = splitDesc[1] ? splitDesc[1].slice(0, splitDesc[1].length - 6) : ''
 
